@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akash Furniture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #2e8b57;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .products, .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      .card p, .card h3 {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Akash Furniture Prithvipur</h1>
+  <p>Handmade Wooden Furniture – Strong, Stylish, and Affordable</p>
+</header>
+
+<section>
+  <h2>Our Products</h2>
+  <div class="products">
+  <a href="sofa.html" style="text-decoration: none; color: inherit;">
+     <div class="card">
+    <img src="2.jpg" alt="Sofa Sets" />
+    <h3>Sofa Sets</h3>
+    <p>Comfortable and stylish wooden sofas made with premium sagwan wood.</p>
+   </div>
+</a>
+  <a href="beds.html" style="text-decoration: none; color: inherit;">
+     <div class="card">
+    <img src="1.jpg" alt="Beds" />
+    <h3>Beds</h3>
+    <p>Strong beds available in single, double, and custom sizes with sagwan wood.</p>
+  </div>
+</a> 
+  <a href="dressing.html" style="text-decoration: none; color: inherit;">
+     <div class="card">
+    <img src="3.jpg" alt="Almari" />
+    <h3>Dressing</h3>
+    <p>Premium wooden dressing with mirror and storage drawers.</p>
+  </div>
+</a>
+  <a href="almari.html" style="text-decoration: none; color: inherit;">
+     <div class="card">
+    <img src="4.jpg" alt="Dreshing">
+    <h3>Almari</h3>
+    <p>Strong almari made from premium metal and  wood also.</p>
+  </div>
+</a>
+  <a href="gate.html" style="text-decoration: none; color: inherit;">
+     <div class="card">
+    <img src="5.jpg" alt="Dreshing">
+    <h3>Gate</h3>
+    <p>sagon lakdi ke gate aur ply board me bhi Gate available hai.</p>
+  </div>
+</a>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Doors" alt="Wooden Door">
+      <h3>Sagon Gates</h3>
+      <p>Heavy wooden gates carved with design and strength.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Chaukhat+Window" alt="Chaukhat">
+      <h3>Chaukhat & Windows</h3>
+      <p>Frames and windows made from jamun and sagwan wood.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Furniture1" alt="Gallery Image">
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Furniture2" alt="Gallery Image">
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x150?text=Furniture3" alt="Gallery Image">
+    </div>
+  </div>
+</section>
+<footer style="background-color: #1e1e1e; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <a href="https://facebook.com" target="_blank"
+       style="background-color: #3b5998; color: white; padding: 6px 12px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+      📘 Facebook
+    </a>
+    <a href="https://instagram.com" target="_blank"
+       style="background-color: #E1306C; color: white; padding: 6px 12px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+      📸 Instagram
+    </a>
+    <a href="https://youtube.com" target="_blank"
+       style="background-color: #FF0000; color: white; padding: 6px 12px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s;">
+      ▶️ YouTube
+    </a>
+  </div>
+
+  <div style="text-align: center; flex: 1;">
+    <p>© 2025 Akash Furniture | Made with ❤️ in India</p>
+    <p>
+      📞 <a href="tel:+916268427050" style="color: #fff;">+91 6268427050</a> | 📍 Near Gramin Bank, Prithvipur, District - Niwari, Pincode - 472336 (M.P.) India
+    </p>
+    <p>⏰ Open: Mon–Sun | 9 AM – 8 PM</p>
+  </div>
+
+  <div>
+<a href="https://wa.me/916268427050" target="_blank"
+   class="whatsapp-button">
+   📱 Order now on WhatsApp
+</a>
+  </div>
+</footer>
+
+</body>
+</html>
