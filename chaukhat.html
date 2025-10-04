@@ -35,7 +35,7 @@
     .container{
       max-width:1100px;
       margin:18px auto;
-      padding:0 16px 60px;
+      padding:0 16px 80px;
     }
 
     .back-btn{
@@ -98,6 +98,20 @@
     }
     .order-btn:active{transform:translateY(1px)}
 
+    /* Info message box */
+    .info-box{
+      background:#fff;
+      border-left:5px solid var(--accent);
+      border-radius:10px;
+      margin-top:30px;
+      padding:14px 18px;
+      text-align:center;
+      font-weight:600;
+      font-size:17px;
+      color:#2d3436;
+      box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    }
+
     /* Floating WhatsApp */
     .whatsapp-float{
       position:fixed;
@@ -113,7 +127,6 @@
       z-index:120;
     }
 
-    /* small screens adjust */
     @media (max-width:420px){
       .item img{ height:140px; }
       header h1{ font-size:20px; }
@@ -130,7 +143,6 @@
     <a class="back-btn" href="index.html">← Back to Home</a>
 
     <div class="gallery">
-      <!-- 5 Chaukhat items -->
       <div class="item">
         <img src="ch1.jpeg" alt="Chaukhat 1 - Classic Wooden Frame" loading="lazy">
         <p>Classic Wooden Chaukhat</p>
@@ -170,6 +182,11 @@
            href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Painted%20Chaukhat%20-%20https://akashfurniture.in/ch5.jpeg"
            target="_blank" rel="noopener">Order on WhatsApp</a>
       </div>
+    </div>
+
+    <!-- Info message -->
+    <div class="info-box">
+      हर साइज और हर लकड़ी में चौखट मिल जाएगी 🪵✨
     </div>
   </div>
 
