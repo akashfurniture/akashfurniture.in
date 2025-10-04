@@ -1,124 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gate Varieties - Akash Furniture</title>
+  <title>🚪 Sagon Gates - Akash Furniture</title>
   <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
+    :root{
+      --bg: #f8f9fa;
+      --accent: #2d6a4f;
+      --wa: #25D366;
     }
-    header {
-      background-color: #2e7d5f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 24px;
+    *{box-sizing:border-box}
+    body{
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
     }
-    .back-btn {
-      margin: 15px;
-      display: inline-block;
-      text-decoration: none;
-      background: #ddd;
-      color: #333;
-      padding: 10px 16px;
-      border-radius: 10px;
-      font-weight: bold;
+
+    header{
+      background:var(--accent);
+      color:#fff;
+      text-align:center;
+      padding:22px 16px;
+      border-radius:0 0 10px 10px;
+      box-shadow:0 3px 10px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:50;
     }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+    header h1{margin:0; font-size:26px; text-shadow:0 1px 0 rgba(0,0,0,0.15);}
+
+    /* Back button top-left */
+    .back-btn{
+      position:absolute;
+      top:16px;
+      left:16px;
+      text-decoration:none;
+      background:#e6e6e6;
+      color:#222;
+      padding:8px 14px;
+      border-radius:22px;
+      font-weight:600;
+      box-shadow:0 2px 6px rgba(0,0,0,0.08);
+      font-size:14px;
     }
-    .card {
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      width: 140px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    .container{
+      max-width:1100px;
+      margin:18px auto;
+      padding:0 16px 80px;
     }
-    .card img {
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap:16px;
+      margin-top:8px;
     }
-    .card h3 {
-      margin: 10px 0 5px;
+
+    .item{
+      background:#fff;
+      border-radius:12px;
+      overflow:hidden;
+      text-align:center;
+      padding:10px;
+      box-shadow:0 6px 18px rgba(16,24,40,0.04);
+      transition:transform 220ms ease, box-shadow 220ms ease;
     }
-    .order-btn {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 10px 12px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+    .item:hover{ transform:translateY(-6px); box-shadow:0 10px 28px rgba(16,24,40,0.07);}
+
+    .item img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+      border-radius:8px;
+      display:block;
+      margin-bottom:10px;
+      transition:transform .3s;
     }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50px;
-      padding: 12px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    .item img:hover{ transform:scale(1.03); }
+
+    .item p{
+      margin:6px 0 10px;
+      font-weight:700;
+      font-size:15px;
+    }
+
+    .order-btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:20px;
+      background:var(--wa);
+      color:#fff;
+      font-weight:700;
+      font-size:14px;
+    }
+    .order-btn:active{transform:translateY(1px)}
+
+    /* Info message box */
+    .info-box{
+      background:#fff;
+      border-left:5px solid var(--accent);
+      border-radius:10px;
+      margin-top:30px;
+      padding:14px 18px;
+      text-align:center;
+      font-weight:600;
+      font-size:17px;
+      color:#2d3436;
+      box-shadow:0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    /* Floating WhatsApp */
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:var(--wa);
+      color:#fff;
+      padding:12px 16px;
+      border-radius:999px;
+      font-weight:800;
+      text-decoration:none;
+      box-shadow:0 8px 30px rgba(37,211,102,0.18);
+      z-index:120;
+    }
+
+    @media (max-width:420px){
+      .item img{ height:140px; }
+      header h1{ font-size:20px; }
     }
   </style>
 </head>
 <body>
 
-  <header>🚪 Gate Varieties</header>
+  <header>
+    <a class="back-btn" href="index.html">← Back to Home</a>
+    <h1>🚪 Sagon Gate Collection — Akash Furniture</h1>
+  </header>
 
-  <a href="index.html" class="back-btn">← Back to Home</a>
+  <div class="container">
 
-  <div class="grid">
-    <!-- Repeat this block for Gate 1 to Gate 15 -->
-    <!-- GATE 1 to 15 -->
-    <!-- Just update the src and text for each gate -->
+    <div class="gallery">
+      <!-- 10 Sagon Gates -->
+      <div class="item">
+        <img src="sg1.jpeg" alt="Sagon Gate 1" loading="lazy">
+        <p>Sagon Gate 1</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%201%20-%20https://akashfurniture.in/sg1.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
 
-    <!-- Example for Gate 1 -->
-    <div class="card">
-      <img src="gate1.jpg" alt="Gate 1">
-      <h3>Gate 1</h3>
-      <a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%201%20chahiye%20(Akash%20Furniture%20se)">Order Now</a>
+      <div class="item">
+        <img src="sg2.jpeg" alt="Sagon Gate 2" loading="lazy">
+        <p>Sagon Gate 2</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%202%20-%20https://akashfurniture.in/sg2.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg3.jpeg" alt="Sagon Gate 3" loading="lazy">
+        <p>Sagon Gate 3</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%203%20-%20https://akashfurniture.in/sg3.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg4.jpeg" alt="Sagon Gate 4" loading="lazy">
+        <p>Sagon Gate 4</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%204%20-%20https://akashfurniture.in/sg4.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg5.jpeg" alt="Sagon Gate 5" loading="lazy">
+        <p>Sagon Gate 5</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%205%20-%20https://akashfurniture.in/sg5.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg6.jpeg" alt="Sagon Gate 6" loading="lazy">
+        <p>Sagon Gate 6</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%206%20-%20https://akashfurniture.in/sg6.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg7.jpeg" alt="Sagon Gate 7" loading="lazy">
+        <p>Sagon Gate 7</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%207%20-%20https://akashfurniture.in/sg7.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg8.jpeg" alt="Sagon Gate 8" loading="lazy">
+        <p>Sagon Gate 8</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%208%20-%20https://akashfurniture.in/sg8.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg9.jpeg" alt="Sagon Gate 9" loading="lazy">
+        <p>Sagon Gate 9</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%209%20-%20https://akashfurniture.in/sg9.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
+
+      <div class="item">
+        <img src="sg10.jpeg" alt="Sagon Gate 10" loading="lazy">
+        <p>Sagon Gate 10</p>
+        <a class="order-btn" href="https://wa.me/916268427050?text=I%20want%20to%20buy%20Sagon%20Gate%2010%20-%20https://akashfurniture.in/sg10.jpeg" target="_blank">Order on WhatsApp</a>
+      </div>
     </div>
 
-    <!-- Copy-paste and update numbers from 2 to 15 -->
-    <!-- Gate 2 to Gate 15 -->
-    <!-- Just replace gate1.jpg with gate2.jpg, etc. and update all numbers -->
-
-    <!-- You can repeat this till Gate 15 like below: -->
-    <div class="card"><img src="gate2.jpg" alt="Gate 2"><h3>Gate 2</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%202%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate3.jpg" alt="Gate 3"><h3>Gate 3</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%203%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate4.jpg" alt="Gate 4"><h3>Gate 4</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%204%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate5.jpg" alt="Gate 5"><h3>Gate 5</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%205%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate6.jpg" alt="Gate 6"><h3>Gate 6</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%206%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate7.jpg" alt="Gate 7"><h3>Gate 7</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%207%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate8.jpg" alt="Gate 8"><h3>Gate 8</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%208%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate9.jpg" alt="Gate 9"><h3>Gate 9</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%209%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate10.jpg" alt="Gate 10"><h3>Gate 10</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2010%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate11.jpg" alt="Gate 11"><h3>Gate 11</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2011%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate12.jpg" alt="Gate 12"><h3>Gate 12</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2012%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate13.jpg" alt="Gate 13"><h3>Gate 13</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2013%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate14.jpg" alt="Gate 14"><h3>Gate 14</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2014%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-    <div class="card"><img src="gate15.jpg" alt="Gate 15"><h3>Gate 15</h3><a class="order-btn" href="https://wa.me/916268427050?text=Mujhe%20Gate%2015%20chahiye%20(Akash%20Furniture%20se)">Order Now</a></div>
-
+    <!-- Info message -->
+    <div class="info-box">
+      हर साइज और हर डिज़ाइन में सागौन गेट उपलब्ध हैं 🌳🚪  
+    </div>
   </div>
 
-  <!-- Floating WhatsApp Button -->
-  <a class="whatsapp-float" href="https://wa.me/916268427050?text=Namaste%2C%20Gates%20ke%20baare%20mein%20jaankari%20chahiye">
-    💬 Order Now on WhatsApp
-  </a>
+  <!-- Floating WhatsApp CTA -->
+  <a class="whatsapp-float"
+     href="https://wa.me/916268427050?text=Hi%2C%20I%20want%20to%20order%20a%20Sagon%20Gate%20from%20Akash%20Furniture"
+     target="_blank" rel="noopener">💌 Order on WhatsApp</a>
+
 </body>
 </html>
