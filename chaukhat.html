@@ -32,16 +32,11 @@
     }
     header h1{margin:0; font-size:26px; text-shadow:0 1px 0 rgba(0,0,0,0.15);}
 
-    .container{
-      max-width:1100px;
-      margin:18px auto;
-      padding:0 16px 80px;
-    }
-
+    /* 🔹 Back button fixed top-left corner */
     .back-btn{
-      display:block;
-      width:fit-content;
-      margin:14px auto;
+      position:absolute;
+      top:16px;
+      left:16px;
       text-decoration:none;
       background:#e6e6e6;
       color:#222;
@@ -49,6 +44,13 @@
       border-radius:22px;
       font-weight:600;
       box-shadow:0 2px 6px rgba(0,0,0,0.08);
+      font-size:14px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:18px auto;
+      padding:0 16px 80px;
     }
 
     .gallery{
@@ -136,11 +138,11 @@
 <body>
 
   <header>
+    <a class="back-btn" href="index.html">← Back to Home</a>
     <h1>🚪 Chaukhat Varieties — Akash Furniture</h1>
   </header>
 
   <div class="container">
-    <a class="back-btn" href="index.html">← Back to Home</a>
 
     <div class="gallery">
       <div class="item">
